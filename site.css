@@ -1,0 +1,24 @@
+/* Idle Machinery pages: one quiet column, system fonts, light and dark */
+:root {
+  --bg: #f4f5f7; --surface: #ffffff; --ink: #1a2029; --muted: #5d6673; --line: #dadee5; --accent: #2c67a8;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #11151b; --surface: #171d25; --ink: #e5e9ef; --muted: #9aa4b2; --line: #2a323e; --accent: #79aeea; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 0 16px; }
+main { max-width: 42rem; margin: 0 auto; padding-block: 56px 64px; }
+h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 12px; text-wrap: balance; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+code { font: .9em ui-monospace, "Cascadia Mono", Consolas, monospace; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 1px 4px; word-break: break-word; }
+.eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.eyebrow a { color: inherit; text-decoration: none; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; gap: 10px; flex-wrap: wrap; font-size: .95rem; color: var(--muted); }
